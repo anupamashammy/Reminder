@@ -245,10 +245,6 @@ showalertdiloagbox(int key){
                ],
         ),
       ),
-          
-        
-      
-
       floatingActionButton: FloatingActionButton(
         onPressed:() {
           Navigator.push(context, MaterialPageRoute(builder: (context) => AddBloodSection(),));
