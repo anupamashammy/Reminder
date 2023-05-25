@@ -56,29 +56,62 @@ class _WorkoutSecondPageState extends State<WorkoutSecondPage> {
       context: context, 
       builder: (context) => AlertDialog(
         title: const Text(" Add a new exercise"),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-          TextField(
-            controller: exerciseNameController,
-          ),
-          TextField(
-            controller: weightController,
-          ),
-          TextField(
-            controller:repsController,
-          ),
-          TextField(
-            controller: setsController,
-          )
-
-          //exercise name
-          //weight
-          //reps
-          //sets
-        ]),
+        content:
+        SingleChildScrollView (
+           child: Column(
+            
+            mainAxisSize: MainAxisSize.min,
+            children: [
+            Padding(
+              padding: const EdgeInsets.all(2.0),
+              child: TextField(
+                
+                controller: exerciseNameController,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Exercise name',
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(2.0),
+              child: TextField(
+                controller: weightController,
+                decoration: const InputDecoration(
+                   border: OutlineInputBorder(),
+                  labelText: 'Weight',
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(2.0),
+              child: TextField(
+                controller:repsController,
+                decoration: const InputDecoration(
+                   border: OutlineInputBorder(),
+                  labelText:' Reps',
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(2.0),
+              child: TextField(
+                controller: setsController,
+                decoration: const InputDecoration(
+                   border: OutlineInputBorder(),
+                  labelText: 'Sets',
+                ),
+              ),
+            )
+         
+            //exercise name
+            //weight
+            //reps
+            //sets
+                 ]),
+         ),
         actions: [
-                 // sacve button
+                 // save button
      MaterialButton(
       onPressed: save,
       child: const Text("Save"),

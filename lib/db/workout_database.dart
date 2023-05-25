@@ -73,6 +73,7 @@ return mySaveWorkouts;
 }
 
 bool exerciseCompleted(List<Workout>workouts){
+  // ignore: non_constant_identifier_names
   for(var Workout in workouts){
     for(var exercise in Workout.exercise){
      if(exercise.isCompleted){
@@ -85,6 +86,7 @@ bool exerciseCompleted(List<Workout>workouts){
 
 
 int getCompletionStatus(String yyyymmdd){
+  // ignore: non_constant_identifier_names
   int CompletionStatus  =_myBox123.get("COMPLETION_STATUS_$yyyymmdd") ??0;
   return CompletionStatus;
 }
@@ -94,6 +96,7 @@ int getCompletionStatus(String yyyymmdd){
 
 
 
+  // ignore: non_constant_identifier_names
   List<String> convertObjectToWorkoutList(List<Workout>Workouts){
     List<String>workoutList =[
 

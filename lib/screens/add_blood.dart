@@ -56,85 +56,82 @@ class _AddBloodSectionState extends State<AddBloodSection> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:const Text('Donate Blood') ,
+        title:const Text('Donate kkkkkkkkkk') ,
         backgroundColor: Colors.red,
       ),
 
-      body: Expanded(
-          
-          
-        child:
-         Padding(
-          padding: const EdgeInsets.only(top: 50),
-          child: Column(
-            children: [
-              Padding(
-             padding: const EdgeInsets.all(8.0),
-             child: TextField(
-              controller: _namecontroller,
-              decoration: const InputDecoration(
-              border: OutlineInputBorder(),
-              labelText: 'Donor Name',
-                )
-                ),
+      body: Padding(
+       padding: const EdgeInsets.only(top: 50),
+       child: ListView(
+         physics: BouncingScrollPhysics()
+         ,shrinkWrap: true,
+         children: [
+           Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: TextField(
+           controller: _namecontroller,
+           decoration: const InputDecoration(
+           border: OutlineInputBorder(),
+           labelText: 'Donor Name',
+             )
+             ),
+           ),
+      
+           Padding(
+           padding: const EdgeInsets.all(8.0),
+           child: TextField(
+           controller: _numbercontroller,
+           keyboardType: TextInputType.number,
+           maxLength: 10,
+           decoration: const InputDecoration(
+           border: OutlineInputBorder(),
+           labelText: 'Phone Number',
+              )
+              ),
               ),
       
               Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextField(
-              controller: _numbercontroller,
-              keyboardType: TextInputType.number,
-              maxLength: 10,
-              decoration: const InputDecoration(
-              border: OutlineInputBorder(),
-              labelText: 'Phone Number',
-                 )
+                padding: const EdgeInsets.all(8.0),
+                child: DropdownButtonFormField(
+                 
+                 decoration: const InputDecoration(
+                   labelText: "Select Blood Group",
                  ),
+                value: selectedGroup,
+                items: bloodGroup
+                .map((e) =>DropdownMenuItem(
+                 child:Text(e),
+                 value: e,
+                 ))
+                .toList(), onChanged: (val){
+                 selectedGroup = val;
+                 _bloodgroupcontroller.text =selectedGroup!;
+                 }
                  ),
+              ),
       
-                 Padding(
-                   padding: const EdgeInsets.all(8.0),
-                   child: DropdownButtonFormField(
-                    
-                    decoration: const InputDecoration(
-                      labelText: "Select Blood Group",
-                    ),
-                   value: selectedGroup,
-                   items: bloodGroup
-                   .map((e) =>DropdownMenuItem(
-                    child:Text(e),
-                    value: e,
-                    ))
-                   .toList(), onChanged: (val){
-                    selectedGroup = val;
-                    _bloodgroupcontroller.text =selectedGroup!;
-                    }
-                    ),
-                 ),
-      
-                 ElevatedButton(onPressed: () async{
-                 await  _submitItem({
-                    "Doner Name" :_namecontroller.text,
-                    "Phone Number":_numbercontroller.text,
-                    "Select Blood Group" :_bloodgroupcontroller.text
-                   });
-                   Navigator.pop(context);
-                 },
-                 style: ButtonStyle(
-                  minimumSize: MaterialStateProperty.all(
-                     const Size(double.infinity, 50)),
-                    backgroundColor: MaterialStateProperty.all(Colors.red)
-                  ),
-                  child:  const Text(
-                    "Submit",
-                    style:TextStyle(
-                      fontSize: 20),
-                      )
-                      )
-            ],
-          ),
+              ElevatedButton(onPressed: () async{
+              await  _submitItem({
+                 "Doner Name" :_namecontroller.text,
+                 "Phone Number":_numbercontroller.text,
+                 "Select Blood Group" :_bloodgroupcontroller.text
+                });
+                Navigator.pop(context);
+              },
+              style: ButtonStyle(
+               minimumSize: MaterialStateProperty.all(
+                  const Size(double.infinity, 50)),
+                 backgroundColor: MaterialStateProperty.all(Colors.red)
+               ),
+               child:  const Text(
+                 "Submit",
+                 style:TextStyle(
+                   fontSize: 20),
+                   )
+                   )
+         ],
+       ),
         ),
-      ),
 
     
     );

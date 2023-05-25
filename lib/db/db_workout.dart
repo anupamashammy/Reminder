@@ -99,6 +99,7 @@ loadHeatMap();
 
 
   Workout getRelevantWorkout (String workoutName){
+      // ignore: avoid_types_as_parameter_names, non_constant_identifier_names
       Workout relevantWorkout = workoutList.firstWhere((Workout) =>Workout.name == workoutName);
       return relevantWorkout;
 
@@ -124,6 +125,7 @@ loadHeatMap();
     for(int i = 0; i<dayInBetween + 1; i++){
         String yyyymmdd = ConvertDateTimeToYYYYMMDD(startDate.add(Duration(days: i)));
 
+        // ignore: non_constant_identifier_names
         int CompletedStatus = db.getCompletionStatus(yyyymmdd);
 
         // year 

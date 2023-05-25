@@ -296,7 +296,8 @@ showalertdiloagbox(int key){
       children: [
         MyInputField(
           //controller: dateTimecontroller,
-          title: "Date", hint: DateFormat.yMd().format(_selectedDate),),
+          title: "Date",
+              hint: DateFormat.yMd().format(_selectedDate),),
                IconButton(icon:const Icon(Icons.calendar_today_outlined, color:darkGreyClr),
                 onPressed:(){
                   setState(() {
@@ -310,11 +311,17 @@ showalertdiloagbox(int key){
            padding: const EdgeInsets.all(8.0),
            child: 
            TextField(
+
             controller: _titlecontroller,
             decoration: const InputDecoration(
             border: OutlineInputBorder(),
             labelText: 'Title',
+
+            
               )
+              
+
+              
               ),
             ),   
              Padding(
@@ -328,7 +335,10 @@ showalertdiloagbox(int key){
               ),
             ),
 
-            ElevatedButton(onPressed: () {
+            ElevatedButton(
+              onPressed: () {
+               // validation(context);
+            
               if(itemKey ==null){
               _createNote({
                   "Title" :_titlecontroller.text,
@@ -341,7 +351,7 @@ showalertdiloagbox(int key){
                 _updateNote(itemKey, {
                  'Title' :_titlecontroller.text.trim(),
                  'Notes' :_descreptioncontroller.text.trim(),
-                "Date"  :dateTimecontroller.text.trim(),
+                 "Date"  :dateTimecontroller.text.trim(),
                 });
 
                }
@@ -387,4 +397,35 @@ _getDatefromUser() async{
         print("It's null or something is wrong");
        }
 }
+
+
+//              validation (BuildContext context){
+//               if( _titlecontroller.text.isNotEmpty && _descreptioncontroller.text.isNotEmpty && dateTimecontroller.text.isNotEmpty){
+                
+//                 return Text( 'Please enter an email address.');
+
+//                }else if(_titlecontroller == _titlecontroller && _descreptioncontroller == _descreptioncontroller){
+                    
+                    
+//                     showDialog(context: context, builder: (ctx1){
+//                       return AlertDialog(title: Text("Error"),
+//                       content:Text(" This field already exists") ,
+//                       actions: [
+//                         TextButton(onPressed:() {
+//                         Navigator.of(ctx1).pop();
+//                         }, child: Text("close"))
+//                       ],
+//                       );
+                            
+//                     });
+
+//                }else{
+//                 return;
+                 
+//                }
+// }
 }
+
+
+               
+

@@ -5,7 +5,7 @@ import 'package:reminder_application8078/models/task.dart';
 
 class TaskTile extends StatelessWidget {
   final Task? task;
-  TaskTile(this.task);
+  const TaskTile(this.task, {super.key});
 
   @override
   Widget build(BuildContext context) {

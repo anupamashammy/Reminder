@@ -13,11 +13,13 @@ class AddDonerBloodDonation extends StatefulWidget {
 class _AddDonerBloodDonationState extends State<AddDonerBloodDonation> {
 
   final  bloodgroups =['A+','A-','B+','B-','AB+','AB-','O+','O-'];
+  // ignore: non_constant_identifier_names
   String ?SelectedGroup;
    
 
   final TextEditingController _donernamecontroller =  TextEditingController();
   final TextEditingController _numbercontroller  =  TextEditingController();
+  // ignore: unused_field
   final TextEditingController _selectbloodcontroller =  TextEditingController();
 
 
@@ -26,7 +28,7 @@ class _AddDonerBloodDonationState extends State<AddDonerBloodDonation> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Donate blood'),
+        title: const Text('Donate blood'),
         backgroundColor: Colors.red,
       ),
       body: Padding(
@@ -37,7 +39,7 @@ class _AddDonerBloodDonationState extends State<AddDonerBloodDonation> {
             TextField(
                   controller: _donernamecontroller,
                   decoration: 
-                  InputDecoration(
+                  const InputDecoration(
                     border: OutlineInputBorder(),
                     label:
                      Text(
