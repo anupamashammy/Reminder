@@ -3,7 +3,6 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:reminder_application8078/screens/add_blood.dart';
-import 'package:reminder_application8078/screens/add_doner.dart';
 import 'package:reminder_application8078/screens/doner_infom.dart';
 
 class BloodDonation extends StatefulWidget {

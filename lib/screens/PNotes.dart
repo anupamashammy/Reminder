@@ -6,7 +6,7 @@ import 'package:intl/intl.dart';
 import 'package:reminder_application8078/widgets/theme.dart';
 
 import '../colors/colors.dart';
-import '../widgets/input_field.dart';
+import '../widgets/PNotes.dart';
 
 class NotePadNotes extends StatefulWidget {
   const NotePadNotes({super.key});
