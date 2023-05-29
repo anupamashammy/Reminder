@@ -78,7 +78,8 @@ class _ToDoHomeScreenState extends State<ToDoHomeScreen> {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 250, 250, 248),
       appBar: AppBar(
-        title: const Text('TO DO'),
+        backgroundColor: Colors.black,
+        title: const Text('HABIT TRACKER'),
         elevation: 0,
       ),
       floatingActionButton: FloatingActionButton(

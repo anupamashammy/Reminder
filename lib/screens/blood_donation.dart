@@ -120,8 +120,6 @@ showalertdiloagbox(int key){
   
 );
  } 
-
-
   final TextEditingController _namecontroller =  TextEditingController();
   final TextEditingController _numbercontroller  =  TextEditingController();
   final TextEditingController _bloodgroupcontroller= TextEditingController();
@@ -132,7 +130,7 @@ showalertdiloagbox(int key){
   
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Blood pppppppppppp"),
+        title: const Text("Blood ppppppp"),
         backgroundColor: Colors.red,
       ),
 
@@ -172,8 +170,6 @@ showalertdiloagbox(int key){
                    searchResults.isEmpty ?
 
                ListView.builder(
-                
-              
                itemCount: _items.length,
                itemBuilder: (ctx, index) {
                final currentItem = _items[index];
@@ -249,7 +245,7 @@ showalertdiloagbox(int key){
           Navigator.push(context, MaterialPageRoute(builder: (context) => AddBloodSection(),));
         } ,
         backgroundColor: Colors.red,
-        child: Icon(Icons.add,
+        child: const Icon(Icons.add,
         size: 50,
         ),
 
@@ -337,8 +333,8 @@ showalertdiloagbox(int key){
                    const Size(double.infinity, 50)),
                   backgroundColor: MaterialStateProperty.all(Colors.red)
                 ),
-                child:   Text("Update",
-                  style:const TextStyle(
+                child:   const Text("Update",
+                  style:TextStyle(
                     fontSize: 15),
                     ),
                     

@@ -4,57 +4,35 @@ import 'package:reminder_application8078/screens/To_Do.dart';
 import 'package:reminder_application8078/screens/WorkOutHome.dart';
 import 'package:reminder_application8078/screens/blood_donation.dart';
 
-class Animation_Page extends StatefulWidget {
-  const Animation_Page({super.key});
+class AnimaTion_Page extends StatefulWidget {
+  const AnimaTion_Page({super.key});
 
   @override
-  State<Animation_Page> createState() => _Animation_PageState();
+  State<AnimaTion_Page> createState() => _AnimaTion_PageState();
 }
 
-class _Animation_PageState extends State<Animation_Page> {
+class _AnimaTion_PageState extends State<AnimaTion_Page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
         body: Padding(
       padding: const EdgeInsets.all(20.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Row(
-            children: [
-              Image.asset(
-                '',
-                width: 200,
-                height: 200,
-              ),
-            ],
+          SizedBox(
+             width: 200,
+              height: 200,
+            child: Image.asset(
+              
+              'reminder_application8078/lib/assets/images.png',
+              
+             fit: BoxFit.fill,
+            ),
           ),
 
-          // Padding(
-          //   padding: const EdgeInsets.all(10.0),
-          //   child: Card(
-          //     color: Colors.green,
-          //     //shadowColor: Colors.green,
-          //     elevation: 20,
-          //     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          //     child: Column(
-          //       children: [
-          //         ListTile(
-          //           title:const Text("Add task"),
-          //           textColor: Colors.white,
-          //           leading: const Icon(Icons.add),
-          //           iconColor: Colors.white,
-          //           onTap :() {
-          //             Navigator.of(context).push(MaterialPageRoute(
-          //         builder:  (context) =>const TaskHomePage() ));},
-
-          //         )
-
-          //       ],
-          //     ),
-
-          //   ),
-          // ),
+         
 
           Padding(
             padding: const EdgeInsets.all(10.0),
@@ -132,31 +110,6 @@ class _Animation_PageState extends State<Animation_Page> {
             ),
           ),
 
-          //     Padding(
-          //     padding: const EdgeInsets.all(10.0),
-          //     child: Card(
-          //       color: const Color.fromARGB(255, 18, 66, 18),
-          //        //shadowColor: Colors.green,
-          //       elevation: 20,
-          //       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          //       child: Column(
-          //         children: [
-          //           ListTile(
-          //             title:const Text("PILL REMINDER"),
-          //             textColor: Colors.white,
-          //             leading: const Icon(Icons.medical_services_outlined),
-          //             iconColor: Colors.white,
-          //             onTap :() {
-          //               Navigator.of(context).push(MaterialPageRoute(
-          //           builder:  (context) =>const PillReminder() ));},
-
-          //           )
-
-          //         ],
-          //       ),
-
-          //    ),
-          //  ),
 
           Padding(
             padding: const EdgeInsets.all(10.0),

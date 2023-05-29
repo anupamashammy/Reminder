@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:reminder_application8078/colors/colors.dart';
-import 'package:sizer/sizer.dart';
 
 class ThemeService{
   final _box = GetStorage();
@@ -29,7 +28,7 @@ void SwitchTheme(){
 
 
 textStyle(){
-  fontsize : 28.sp;
+  fontsize : 28;
   Color : pinkClr;
   FontWeight : FontWeight.w500;
 

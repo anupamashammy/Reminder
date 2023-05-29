@@ -22,7 +22,7 @@ _navigatehome() async {
   Navigator.pushReplacement(
     context,
     MaterialPageRoute(
-      builder: (context) =>const Animation_Page() ,
+      builder: (context) =>const AnimaTion_Page() ,
     ),
   );
 }

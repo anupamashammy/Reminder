@@ -4,6 +4,7 @@ import 'ToDo_button.dart';
 
 
 class DialogBox extends StatelessWidget {
+  // ignore: prefer_typing_uninitialized_variables
   final controller;
   VoidCallback onSave;
   VoidCallback onCancel;
@@ -18,8 +19,8 @@ class DialogBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      backgroundColor: Colors.yellow[300],
-      content: Container(
+      backgroundColor: const Color.fromARGB(255, 218, 205, 245),
+      content: SizedBox(
         height: 120,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
