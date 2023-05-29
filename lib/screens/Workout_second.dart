@@ -26,7 +26,7 @@ class _WorkoutSecondPageState extends State<WorkoutSecondPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed:createNewExercise,
-        child: Icon(Icons.add),
+        child:const Icon(Icons.add),
       ),
 
 

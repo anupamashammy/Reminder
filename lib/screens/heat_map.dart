@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_heatmap_calendar/flutter_heatmap_calendar.dart';
 import 'package:reminder_application8078/widgets/Work_DateTime.dart';
 
@@ -17,10 +15,10 @@ class MyHeatMap extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       child: HeatMap(
         startDate :  createDateTimeObject(startDateYYYYMMDD),
-        endDate   :DateTime.now().add(Duration(days: 0)),
+        endDate   :DateTime.now().add(const Duration(days: 0)),
         datasets  :datasets, 
         colorMode: ColorMode.color,
         defaultColor: Colors.grey,
@@ -29,7 +27,7 @@ class MyHeatMap extends StatelessWidget {
         showText: true,
         scrollable:true ,
         size: 30,
-        colorsets: {
+        colorsets:const {
           1 :Colors.green,
         },
       

@@ -76,7 +76,7 @@ class _ToDoHomeScreenState extends State<ToDoHomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 250, 250, 248),
+      backgroundColor:const Color.fromARGB(255, 250, 250, 248),
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: const Text('HABIT TRACKER'),

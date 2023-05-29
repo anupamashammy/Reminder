@@ -15,7 +15,6 @@ class _WorkoutHomePagesState extends State<WorkoutHomePages> {
 
   @override
   void initState() {
-    // TODO: implement initStat
     super.initState();
     Provider.of<WorkoutDate>(context, listen: false).initalizeWorkoutList();
   }
@@ -44,7 +43,7 @@ final newWorkoutNameController = TextEditingController();
 
            ListView.builder(
              shrinkWrap: true,
-             physics:    NeverScrollableScrollPhysics(),
+             physics:    const NeverScrollableScrollPhysics(),
              itemCount: value.getWorkoutList().length,
              itemBuilder:(context, index) => ListTile(
              title: Text(value.getWorkoutList()[index].name),
@@ -109,6 +108,7 @@ void save() {
    
    }
 
+   // ignore: non_constant_identifier_names
    void GoToWorkoutpage(String workoutName){
    Navigator.push(context, MaterialPageRoute(
     builder: (context) => WorkoutSecondPage(workoutName: workoutName)

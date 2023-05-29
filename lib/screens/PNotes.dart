@@ -26,12 +26,12 @@ class _NotePadNotesState extends State<NotePadNotes> {
      
    for( var item in _noteitems){
     
-    var Title =item['Title'];
-    var Notes =item['Notes '];
+    var title =item['Title'];
+    var notes =item['Notes '];
    
 
-    if(Title.toString().toLowerCase().contains(keyword.toLowerCase()) || 
-       Notes.toString().toLowerCase().contains(keyword.toLowerCase())){
+    if(title.toString().toLowerCase().contains(keyword.toLowerCase()) || 
+       notes.toString().toLowerCase().contains(keyword.toLowerCase())){
        results.add(item);
     }
    }
@@ -54,6 +54,7 @@ class _NotePadNotesState extends State<NotePadNotes> {
 
   List<Map<String,dynamic>> _noteitems = [];
 
+  // ignore: non_constant_identifier_names
   final _note_box = Hive.box('_note_box');
   
   @override
@@ -76,6 +77,7 @@ class _NotePadNotesState extends State<NotePadNotes> {
 log(_note_box.toString());
     setState(() {
       _noteitems =data.reversed.toList();
+     // ignore: avoid_print
      print(_noteitems.length);
     });
   }
@@ -364,7 +366,7 @@ showalertdiloagbox(int key){
                style: ButtonStyle(
                 minimumSize: MaterialStateProperty.all(
                    const Size(double.infinity, 50)),
-                  backgroundColor: MaterialStateProperty.all(Color.fromARGB(255, 19, 180, 205))
+                  backgroundColor: MaterialStateProperty.all(const Color.fromARGB(255, 19, 180, 205))
                 ),
                 child:   Text(itemKey ==null ?"Create New":"Update",
                   style:const TextStyle(
@@ -394,7 +396,7 @@ _getDatefromUser() async{
           
         });
        }else{
-        print("It's null or something is wrong");
+        log("It's null or something is wrong");
        }
 }
 

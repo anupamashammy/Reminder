@@ -67,6 +67,7 @@ class MyInputField extends StatelessWidget {
                       ),
                     ) ,
                     ),
+                    // ignore: unnecessary_null_comparison
                     Widget==null?Container():Container(child: widget,)
                 ],
               )
